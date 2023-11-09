@@ -1,0 +1,19 @@
+.my-button {
+  background-color: pink;
+  font-weight: bold;
+  font-size: 18px;
+
+  .btn {
+    color: white;
+    background-color: blue;
+  }
+}
+
+.my-button:hover {
+  background-color: purple;
+}
+
+.btn-inner {
+  color: gold;
+  background-color: aqua;
+}
