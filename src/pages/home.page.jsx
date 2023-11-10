@@ -1,11 +1,13 @@
 import React from 'react';
 import HeaderPart from '../parts/header.part';
+import HeroPart from '../parts/hero.part';
+import landingPage from '../json/landingPage.json';
 
 const HomePage = () => {
   return (
     <>
       <HeaderPart />
-      <h1>Ini Home page</h1>
+      <HeroPart data = { landingPage.hero } />
     </>
   );
 }

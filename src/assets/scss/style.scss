@@ -14,6 +14,7 @@ header {
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
   position: relative;
+  margin-bottom: 40px;
 
   .navbar {
     min-height: 80px;
@@ -35,6 +36,61 @@ header {
             font-weight: bold;
           }
         }
+      }
+    }
+  }
+}
+
+// Hero styling
+.section-hero {
+  position: relative;
+  
+  h1.text-hero {
+    color: #152C5B;
+    line-height: 63px;
+    font-size: 42px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+
+  p.subtext-hero {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    color: #B0B0B0;
+    margin-bottom: 30px;
+  }
+
+  .btn-show {
+    border-radius: 4px;
+    background-color: rgb(50, 82, 223);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px 0px rgba(50, 82, 223, 0.30);
+    min-height: 50px;
+    min-width: 150px;
+    &:hover {
+      background-color: rgb(70, 99, 225);
+      color: #fff;
+    }
+  }
+  
+  div.statistic {
+    margin-top: 82px;
+    .img-stat {
+      max-width: 32px;
+      max-height: 32px;
+      margin-bottom: 10px;
+    }
+
+    p.text-stat {
+      font-size: 16px;
+      font-weight: lighter;
+
+      span.stat-number {
+        color: #152C5B;
+        font-weight: bold;
       }
     }
   }
