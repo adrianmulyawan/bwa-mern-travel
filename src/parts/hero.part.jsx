@@ -1,4 +1,5 @@
 import React from 'react';
+import { Fade } from 'react-reveal';
 import ButtonComponent from '../components/Button/button.component';
 import numberFormat from '../tools/numberFormat';
 import banner from '../assets/images/banner.png';
@@ -22,7 +23,8 @@ const HeroPart = (props) => {
       <div className="container">
         <div className="row justify-content-center align-items-center">
           {/* Text Hero */}
-          <div className="col-lg-6 col-md-6 col-sm-12 pr-5">
+          <Fade left>
+            <div className="col-lg-6 col-md-6 col-sm-12 pr-5">
             {/* Text Hero */}
             <h1 className='text-hero'>
               Forget Busy Work, <br />
@@ -62,16 +64,19 @@ const HeroPart = (props) => {
                 </p>
               </div>
             </div>
-          </div>
+            </div>
+          </Fade>
 
           {/* Image Hero */}
-          <div className="col-lg-6 col-md-6 d-none d-sm-block" style={{ marginTop: '40px' }}>
-            <img 
-              src={ banner } 
-              className='img-hero img-fluid' 
-              alt="hero" 
-            />
-          </div>
+          <Fade right>
+            <div className="col-lg-6 col-md-6 d-none d-sm-block" style={{ marginTop: '40px' }}>
+              <img 
+                src={ banner } 
+                className='img-hero img-fluid' 
+                alt="hero" 
+              />
+            </div>
+          </Fade>
         </div>
       </div>
     </section>
