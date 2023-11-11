@@ -5,6 +5,7 @@ import landingPage from '../json/landingPage.json';
 import PickedPart from '../parts/picked.part';
 import CategoryPart from '../parts/category.part';
 import TestimonialPart from '../parts/testimonial.part';
+import FooterPart from '../parts/footer.part';
 
 const HomePage = () => {
   const refMostPicked = useRef(null);
@@ -17,6 +18,7 @@ const HomePage = () => {
       <PickedPart refMostPicked={ refMostPicked } data = { landingPage.mostPicked } />
       <CategoryPart data = { landingPage.categories }></CategoryPart>
       <TestimonialPart data = { landingPage.testimonial } />
+      <FooterPart />
     </>
   );
 }
