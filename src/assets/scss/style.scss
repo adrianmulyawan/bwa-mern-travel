@@ -14,7 +14,7 @@ header {
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 
   .navbar {
     min-height: 80px;
@@ -44,7 +44,7 @@ header {
 // Hero styling
 .section-hero {
   position: relative;
-  
+
   h1.text-hero {
     color: #152C5B;
     line-height: 63px;
@@ -91,6 +91,222 @@ header {
       span.stat-number {
         color: #152C5B;
         font-weight: bold;
+      }
+    }
+  }
+}
+
+// Most Picked Styling
+section.section-most-picked {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #152C5B;
+  }
+
+  .container-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(185px, auto);
+    grid-auto-flow: dense;
+    row-gap: 30px;
+    column-gap: 30px;
+    position: relative;
+    z-index: 3;
+
+    &.sm {
+      grid-auto-rows: minmax(245px, auto);
+      row-gap: 10px;
+      column-gap: 10px;
+    }
+
+    .item {
+      &.column-1 {
+        grid-column-end: span 1;
+      }
+      &.column-2 {
+        grid-column-end: span 2;
+      }
+      &.column-3 {
+        grid-column-end: span 3;
+      }
+      &.column-4 {
+        grid-column-end: span 4;
+      }
+      &.column-5 {
+        grid-column-end: span 5;
+      }
+      &.column-6 {
+        grid-column-end: span 6;
+      }
+      &.column-7 {
+        grid-column-end: span 7;
+      }
+      &.column-8 {
+        grid-column-end: span 8;
+      }
+      &.column-9 {
+        grid-column-end: span 9;
+      }
+      &.column-10 {
+        grid-column-end: span 10;
+      }
+      &.column-11 {
+        grid-column-end: span 11;
+      }
+      &.column-12 {
+        grid-column-end: span 12;
+      }
+      &.row-1 {
+        grid-row-end: span 1;
+      }
+      &.row-2 {
+        grid-row-end: span 2;
+      }
+      &.row-3 {
+        grid-row-end: span 3;
+      }
+      &.row-4 {
+        grid-row-end: span 4;
+      }
+      &.row-5 {
+        grid-row-end: span 5;
+      }
+      &.row-6 {
+        grid-row-end: span 6;
+      }
+      &.row-7 {
+        grid-row-end: span 7;
+      }
+      &.row-8 {
+        grid-row-end: span 8;
+      }
+      &.row-9 {
+        grid-row-end: span 9;
+      }
+      &.row-10 {
+        grid-row-end: span 10;
+      }
+      &.row-11 {
+        grid-row-end: span 11;
+      }
+      &.row-12 {
+        grid-row-end: span 12;
+      }
+    }
+
+    .img-cover {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .img-contain {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+
+    .card {
+      height: 100%;
+
+      .tag {
+        z-index: 3;
+        font-size: 0.875rem;
+        background-color: #FF498B;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: .25rem 1.25rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        min-height: 30px;
+
+        span {
+          font-weight: 300 lighter;
+        }
+      }
+
+      .img-wrapper {
+        height: 100%;
+        margin-bottom: 0;
+        border-radius: 0.9375rem;
+        overflow: hidden;
+      }
+
+      .meta-wrapper  {
+        margin-top: 1rem;
+        h5 {
+          font-size: 1.125rem;
+          margin-bottom: 2px;
+        }
+        span {
+          font-size: .875rem;
+        }
+      }
+
+      &.card-featured {
+        overflow: hidden;
+        cursor: pointer;
+        height: 100%;
+        border-radius: 15px;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transform: scale(1.1);
+          transition: .5s transfrom ease-in-out;
+          z-index: 2;
+        }
+
+        .img-wrapper {
+          z-index: 1;
+          margin: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transform: scale(1.1);
+          transition: .25s transform ease-in-out;
+          border: .25rem;
+        }
+
+        .meta-wrapper {
+          z-index: 4;
+          color: #fff;
+          padding: 20px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          transform: translateY(0);
+          transition: .3s transform ease-in-out;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+        }
+
+        &:hover {
+          .meta-wrapper {
+            transform: translateY(-5px);
+          }
+          &::after {
+            transform: scale(1);
+          }
+          .img-wrapper {
+            transform: translateY(-5px);
+          }
+        }
       }
     }
   }

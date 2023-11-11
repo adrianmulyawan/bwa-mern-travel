@@ -12,10 +12,12 @@ const HeroPart = (props) => {
   const { data } = props;
 
   const showMostPicked = () => {
-    window.scrollTo({
-      top: props.refMostPicked.current.offsetTop - 30,
-      behavior: 'smooth'
-    });
+    if (props.refMostPicked && props.refMostPicked.current) {
+      window.scrollTo({
+        top: props.refMostPicked.current.offsetTop - 30,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -69,7 +71,7 @@ const HeroPart = (props) => {
 
           {/* Image Hero */}
           <Fade right>
-            <div className="col-lg-6 col-md-6 d-none d-sm-block" style={{ marginTop: '40px' }}>
+            <div className="col-lg-6 d-none d-md-block d-sm-block" style={{ marginTop: '40px' }}>
               <img 
                 src={ banner } 
                 className='img-hero img-fluid' 
