@@ -322,3 +322,30 @@ section.section-category {
     font-weight: 400;
   }
 }
+
+// Testimonial Section 
+section.section-testimonial {
+  .data-testimonial {
+    h4.text-testimonial {
+      font-size: 24px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 60px;
+    }
+    h4.describe-testimonial {
+      font-size: 32px;
+      font-weight: 300;
+      font-family: 'Poppins', sans-serif;
+      color: #152C5B;
+      margin-top: 8px;
+    }
+    h4.name-testimonial {
+      font-size: 18px;
+      font-weight: lighter;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 8px;
+      margin-bottom: 50px;
+    }
+  }
+  
+}
