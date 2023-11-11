@@ -97,7 +97,7 @@ header {
 }
 
 // Most Picked Styling
-section.section-most-picked {
+section.container {
   margin-top: 70px;
   margin-bottom: 70px;
 
@@ -214,6 +214,7 @@ section.section-most-picked {
 
     .card {
       height: 100%;
+      border: 0;
 
       .tag {
         z-index: 3;
@@ -309,5 +310,15 @@ section.section-most-picked {
         }
       }
     }
+  }
+}
+
+// Category Style
+section.section-category {
+  h1.text-category {
+    color: #152C5B;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 }
