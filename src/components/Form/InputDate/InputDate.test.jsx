@@ -51,25 +51,13 @@ test("Should have tag <input> and has classname .form-control", () => {
   expect(input).toBeInTheDocument();
 });
 
-// test("Should show date picker when click input field", async () => {
-//   const { container, input } = setup();
+test("Should show date picker when click input field", () => {
+  const { container, input } = setup();
 
-//   fireEvent.click(input, { button: 1 });
+  // screen.debug();
+  fireEvent.click(input, { button: 1 });
+  // screen.debug();
+  const datePickerWrapper = container.querySelector(`.date-range-wrapper`);
 
-//   // Menunggu elemen muncul di DOM
-//   await waitFor(() => {
-//     const datePickerWrapper = container.querySelector(".date-range-wrapper");
-//     expect(datePickerWrapper).toBeInTheDocument();
-//   });
-// });
-
-// test("Should show date picker when click input field", () => {
-//   const { container, input } = setup();
-
-//   // screen.debug();
-//   fireEvent.click(input, { button: 1 });
-//   // screen.debug();
-//   const datePickerWrapper = container.querySelector(`.date-range-wrapper`);
-
-//   expect(datePickerWrapper).toBeInTheDocument();
-// });
+  expect(datePickerWrapper).toBeInTheDocument();
+});

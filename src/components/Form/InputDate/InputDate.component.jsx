@@ -1,24 +1,27 @@
-import React, { useState, useRef, useEffect } from 'react';
-import './inputDate.scss';
-import propTypes from 'prop-types';
-import { DateRange } from 'react-date-range';
-import './inputDate.scss';
-import 'react-date-range/dist/styles.css';
-import 'react-date-range/dist/theme/default.css';
-import formatDate from '../../../tools/formatDate';
-import iconCalender from '../../../assets/icons/ic_calendar.svg';
+import React, { useState, useRef, useEffect } from "react";
+import propTypes from "prop-types";
+
+import { DateRange } from "react-date-range";
+
+import "./inputDate.scss";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+
+import formatDate from "../../../tools/formatDate";
+import iconCalendar from "../../../assets/icons/ic_calendar.svg";
 
 const InputDateComponent = (props) => {
   const { value, placeholder, name } = props;
   const [isShowed, setIsShowed] = useState(false);
 
   const datePickerChange = (value) => {
-    props.onChange({
+    const target = {
       target: {
         value: value.selection,
         name: name,
       },
-    });
+    };
+    props.onChange(target);
   };
 
   useEffect(() => {
@@ -43,7 +46,6 @@ const InputDateComponent = (props) => {
   const displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${
     value.endDate ? " - " + formatDate(value.endDate) : ""
   }`;
-  // console.info(displayDate, '=> display date')
 
   return (
     <div
@@ -53,7 +55,7 @@ const InputDateComponent = (props) => {
       <div className="input-group">
         <div className="input-group-prepend bg-gray-900">
           <span className="input-group-text">
-            <img src={iconCalender} alt="icon calendar" />
+            <img src={iconCalendar} alt="icon calendar" />
           </span>
         </div>
         <input
@@ -79,9 +81,9 @@ const InputDateComponent = (props) => {
       </div>
     </div>
   );
-};
+}
 
-InputDateComponent.propTypes = {
+Date.propTypes = {
   value: propTypes.object,
   onChange: propTypes.func,
   placeholder: propTypes.string,
