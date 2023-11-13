@@ -13,13 +13,12 @@ const InputDateComponent = (props) => {
   const [isShowed, setIsShowed] = useState(false);
 
   const datePickerChange = (value) => {
-    const target = {
+    props.onChange({
       target: {
         value: value.selection,
         name: name,
       },
-    };
-    props.onChange(target);
+    });
   };
 
   useEffect(() => {
@@ -28,7 +27,7 @@ const InputDateComponent = (props) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  });
+  }, []);
 
   const refDate = useRef(null);
   const handleClickOutside = (event) => {

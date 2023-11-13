@@ -20,7 +20,7 @@ const ExamplePage = () => {
   return (
     <>
       <div className="row align-items-center justify-content-center" style={{ height: '100vh' }}>
-        <div className="col-auto">
+        <div className="col-4">
           <InputDateComponent
             max={30}
             onChange={handleChange}
