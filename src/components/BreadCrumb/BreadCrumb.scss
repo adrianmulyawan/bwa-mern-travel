@@ -1,0 +1,14 @@
+ol.breadcrumb {
+  font-size: 18px;
+  
+  li.breadcrumb-item {
+    a {
+      color: #B0B0B0;
+      text-decoration: none;
+    }
+  }
+  li.active {
+    color: #152C5B;
+    font-weight: 500;
+  }
+}
