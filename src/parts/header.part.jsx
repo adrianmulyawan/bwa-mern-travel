@@ -24,12 +24,14 @@ const HeaderPart = (props) => {
           <nav className="navbar bg-light navbar-expand-lg bg-body-tertiary">
             <div className="container">
               {/* Icon Website */}
-              <IconText className='mx-auto' />
+              <div className="row mx-auto">
+                <IconText className='mx-auto centered-icon' />
+              </div>
             </div>
           </nav>
         </header>
       </Fade>
-    )
+    );
   }
 
   return (
