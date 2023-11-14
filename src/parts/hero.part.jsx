@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Fade } from 'react-reveal';
 import ButtonComponent from '../components/Button/button.component';
 import numberFormat from '../tools/numberFormat';
@@ -10,15 +10,14 @@ import '../assets/scss/style.scss';
 
 const HeroPart = (props) => {
   const { data } = props;
+  const refMostPicked = useRef(null);
 
-  const showMostPicked = () => {
-    if (props.refMostPicked && props.refMostPicked.current) {
-      window.scrollTo({
-        top: props.refMostPicked.current.offsetTop - 30,
-        behavior: 'smooth'
-      });
-    }
-  };
+  function showMostPicked() {
+    window.scrollTo({
+      top: refMostPicked.current.offsetTop - 30,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <section className='section-hero pt-4'>
@@ -41,7 +40,12 @@ const HeroPart = (props) => {
             </p>
 
             {/* Button */}
-            <ButtonComponent className="btn btn-show btn-primary" hasShadow isPrimary onClick={ showMostPicked }>
+            <ButtonComponent
+              className="btn px-5"
+              hasShadow
+              isPrimary
+              onClick={showMostPicked}
+            >
               Show Me Now
             </ButtonComponent>
 
@@ -73,6 +77,7 @@ const HeroPart = (props) => {
           <Fade right>
             <div className="col-lg-6 d-none d-md-block d-sm-block" style={{ marginTop: '40px' }}>
               <img 
+                ref={refMostPicked}
                 src={ banner } 
                 className='img-hero img-fluid' 
                 alt="hero" 
