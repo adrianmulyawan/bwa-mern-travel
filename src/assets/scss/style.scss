@@ -403,3 +403,104 @@ footer {
     font-family: 'Poppins', sans-serif;
   }
 }
+
+// # Detail Style
+// > Title Text
+div.row-detail-title {
+  .detail-title {
+    color: #152C5B;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 4px;
+  }
+
+  .detail-location {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #B0B0B0;
+  }
+}
+
+div.row-properties-image {
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+main {
+  margin-top: 50px;
+}
+
+.properties-description-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #152C5B;
+  font-family: 'Poppins', sans-serif;
+}
+
+.properties-description-text {
+  color: #B0B0B0;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.row-features-properties {
+  div.data-quantity {
+    font-size: 16px;
+    span.quantity {
+      color: #152C5B;
+      font-weight: 400;
+    }
+    span.name {
+      font-weight: lighter;
+      color: #B0B0B0;
+    }
+  }
+}
+
+.section-desc {
+  .col-booking-form {
+    .card {
+      border: 1px solid #E5E5E5;
+      border-radius: 15px;
+    }
+    h4.text-booking {
+      font-size: 20px;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 14px;
+    }
+    h5.text-teal {
+      font-size: 36px;
+      font-weight: 500;
+      font-family: 'Poppins', sans-serif;
+      color: #1ABC9C;
+    }
+    .text-gray-500 {
+      font-size: 36px;
+      font-weight: lighter;
+      font-family: 'Poppins', sans-serif;
+      color: #B0B0B0;
+    }
+    label {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #152C5B;
+    }
+    h6.total-pay {
+      font-size: 16px;
+      font-weight: lighter;
+      color: #B0B0B0;
+      span.total-price {
+        color: #152C5B;
+        font-weight: normal;
+      }
+      span.total-night {
+        color: #152C5B;
+        font-weight: normal;
+      }
+    }
+  }
+}
