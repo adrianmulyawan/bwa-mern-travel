@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import propTypes from 'prop-types';
 
-import '../InputFile/style.scss';
+import '../InputText/inputText.scss';
 
 const InputFileComponent = (props) => {
   const {
